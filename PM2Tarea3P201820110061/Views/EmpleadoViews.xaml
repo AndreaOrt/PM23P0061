@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:PM2Tarea3P201820110061.ViewModels"
+    x:Class="PM2Tarea3P201820110061.Views.EmpleadoViews">
+
+    <ContentPage.BindingContext>
+        <vm:EmpleadoViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="Formulario de Empleado" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" TextColor="#004B9F"></Label>
+            <Label Text="Id" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Id}" IsReadOnly="True"></Entry>
+
+            <Label Text="Nombre" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Nombre}" Keyboard="Text"></Entry>
+
+            <Label Text="Apellido" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Apellidos}" Keyboard="Text"></Entry>
+
+            <Label Text="Edad" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Edad}" Keyboard="Numeric"></Entry>
+
+            <Label Text="Direccion" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Direccion}" Keyboard="Text"></Entry>
+
+            <Label Text="Puesto" FontAttributes="Bold" FontSize="17"></Label>
+            <Entry Text="{Binding Puesto}" Keyboard="Text"></Entry>
+
+            <Button Text="Guardar Empleado" Command="{Binding GuardarEmpCommand}" BackgroundColor="#006C42" TextColor="White"></Button>
+            <Button Text="Listado de Empleados" x:Name="btnVerLista" Clicked="btnVerLista_Clicked" BackgroundColor="#009F98" TextColor="White"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
